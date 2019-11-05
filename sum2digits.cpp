@@ -16,7 +16,11 @@ addTwoDigits(n) = 11
 int addTwoDigit(int n){
 	std::string test = std::to_string(n);
 	std::cout << test << std::endl;
-	return 0;
+	int first  = test[0] - '0';
+	int second = test[1] - '0';
+	int answer = first + second;
+	std::cout << answer  << std::endl;
+	return answer;
 
 }
 
