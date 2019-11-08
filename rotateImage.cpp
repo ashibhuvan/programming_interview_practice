@@ -37,7 +37,24 @@ void rotateImage(std::vector<std::vector<int>> a){
 		}
 		std::cout << "\n" ;
 	}
-
+  std::vector<std::vector<int>> result(a);
+    //you need a size for index reference
+    int size = a.size();
+    
+    for(auto& it : a){
+        //iterate through each row
+        for(auto& it2 : it){
+            
+            //take each element and put it in the size-1 location
+            int index = &it2 - &it[0];
+            //gunna do the size element and then reduce it
+            //size is 3 so gotta take the size -1 
+            //for each element in the first row, set the size element of the index-1 row
+            result[index][size-1] = it2;
+        }
+        --size;
+        
+    }
 
 }
 int main(){
