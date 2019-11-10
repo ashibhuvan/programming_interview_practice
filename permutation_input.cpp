@@ -9,7 +9,7 @@ void permutation_helper(std::string& S,  std::string& character){
 	if(S == ""){
 	std::cout << character << std::endl;
 	}
-
+	std::cout << character;
 	for(auto& it : S){
 		int index = &it - &S[0];
 		char  c = it;
